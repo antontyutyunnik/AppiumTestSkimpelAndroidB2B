@@ -14,14 +14,18 @@ class LoginPage(Page):
     EMAIL = "antontyutyunnik93@gmail.com"
     EMAIL_BAD = "antontyutyunnik9333@gmail.com"
     EMAIL_OR_PASS_NOT_CORRECT = "Email or password not correct"
+    EINLOGGEN = "Einloggen"
+    PROFILE = "Profile"
     PASS_INPUT = "••••••••"
     PASS = "123qqq"
     PASS_BAD = "123qqqBAD"
     SIGN_IN = "Sign in"
     SIGN_IN_XPAHT = (By.XPATH, "//android.view.ViewGroup[@content-desc='btn-signIn']/android.view.View")
-    EMAIL_OR_PASS_NOT_CORRECT_XPAHT = (By.XPATH, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[2]")
-    EINLOGGEN = "Einloggen"
-    PROFILE = "Profile"
+    EMAIL_OR_PASS_NOT_CORRECT_XPAHT = (By.XPATH, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout"
+                                                 "/android.widget.FrameLayout/android.widget.FrameLayout/android.view"
+                                                 ".ViewGroup/android.view.ViewGroup/android.view.ViewGroup["
+                                                 "2]/android.view.ViewGroup/android.view.ViewGroup["
+                                                 "2]/android.widget.TextView[2]")
 
     def selection_language_eu(self):
         self.find_elements_and_click(self.LANGUAGE_EN_TEXT, *self.WIDGET_TEXTVIEW)
