@@ -34,6 +34,10 @@ class Page:
         e = self.driver.find_element(*locator)
         e.click()
 
+    def input_line_xpath(self, text, *locator):
+        e = self.driver.find_element(*locator)
+        e.send_keys(text)
+
     def input(self, text, send_text, *locator):
         for element in self.driver.find_elements(*locator):
             if element.text == text:

@@ -12,3 +12,9 @@ Feature: Creating a category in the menu / choosing a photo for the menu from th
     When Clicking on the button will add EU 5.1
     When Click add photo EU 5.1
     When Press the button with Choose from Library EU 5.1
+    When Click Google Photos EU 5.1
+    When Click on the Downloads folder EU 5.1
+    When Select photo EU 5.1
+    When Input category name EU 5.1
+    When Click save EU 5.1
+    When Click button ok EU 5.1

@@ -8,7 +8,8 @@ def before_scenario(context, scenario):
         "platformName": "Android",
         "platformVersion": "10",
         "deviceName": "Xiaomi M2006C3MNG",
-        "app": "/Users/anton/Downloads/app-release7.apk",
+        # "app": "/Users/anton/Downloads/app-release7.apk",
+        "app": "/Users/anton/Build/app-release7.apk",
         "appPackage": "com.skimpel.business",
         "appActivity": "com.skimpel.business.MainActivity"
     }
