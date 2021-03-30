@@ -1,4 +1,6 @@
 import time
+
+from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.common.by import By
 from pages.base_page import Page
 
@@ -12,15 +14,22 @@ class LoginPage(Page):
     I_AGREE_BUTTON_DE = "Ich stimme den Regeln zu"
     EMAIL_INPUT = "Example@gmail.com"
     EMAIL = "antontyutyunnik93@gmail.com"
+    EMAIL_FOR_REGISTRATION = "avtotest1@gmail.com"
     EMAIL_BAD = "antontyutyunnik9333@gmail.com"
     EMAIL_OR_PASS_NOT_CORRECT = "Email or password not correct"
+    COMPANY_NAME_INPUT = "Name business"
+    COMPANY_NAME = "avtotest1"
+    SEARCH_ADDRESS_INPUT = "Start typing your address"
+    SEARCH_ADDRESS = "Belziger 19"
     EINLOGGEN = "Einloggen"
     PROFILE = "Profile"
     PASS_INPUT = "••••••••"
     PASS = "123qqq"
     PASS_BAD = "123qqqBAD"
     SIGN_IN = "Sign in"
+    SIGN_UP = "Sign Up"
     SIGN_IN_XPAHT = (By.XPATH, "//android.view.ViewGroup[@content-desc='btn-signIn']/android.view.View")
+    SIGN_UP_XPAHT = (By.XPATH, "//android.view.ViewGroup[@content-desc='btn-signUp']/android.widget.TextView")
     EMAIL_OR_PASS_NOT_CORRECT_XPAHT = (By.XPATH, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout"
                                                  "/android.widget.FrameLayout/android.widget.FrameLayout/android.view"
                                                  ".ViewGroup/android.view.ViewGroup/android.view.ViewGroup["
@@ -46,8 +55,20 @@ class LoginPage(Page):
     def click_on_button_i_agree_de(self):
         self.find_elements_and_click(self.I_AGREE_BUTTON_DE, *self.WIDGET_TEXTVIEW)
 
+    def click_button_sign_up_on_registration_page_eu(self):
+        self.find_elements_and_click(self.SIGN_UP, *self.WIDGET_TEXTVIEW)
+        time.sleep(7)
+
     def input_email(self):
         self.input(self.EMAIL_INPUT, self.EMAIL, *self.WIDGET_EDITTEXT)
+
+    def input_search_address_for_registration(self):
+        self.input(self.SEARCH_ADDRESS_INPUT, self.SEARCH_ADDRESS, *self.WIDGET_EDITTEXT)
+        time.sleep(2)
+
+    def input_email_registration(self):
+        time.sleep(2)
+        self.input(self.EMAIL_INPUT, self.EMAIL_FOR_REGISTRATION, *self.WIDGET_EDITTEXT)
 
     def input_email_bad(self):
         self.input(self.EMAIL_INPUT, self.EMAIL_BAD, *self.WIDGET_EDITTEXT)
@@ -55,14 +76,23 @@ class LoginPage(Page):
     def input_pass(self):
         self.input(self.PASS_INPUT, self.PASS, *self.WIDGET_EDITTEXT)
 
+    def input_pass_registration(self):
+        self.input(self.PASS_INPUT, self.PASS, *self.WIDGET_EDITTEXT)
+
     def input_pass_bad(self):
         self.input(self.PASS_INPUT, self.PASS_BAD, *self.WIDGET_EDITTEXT)
+
+    def input_company_name(self):
+        self.input(self.COMPANY_NAME_INPUT, self.COMPANY_NAME, *self.WIDGET_EDITTEXT)
 
     def click_button_sign_in(self):
         self.click_button(self.SIGN_IN, *self.WIDGET_TEXTVIEW)
 
     def click_button_sign_in_xpath(self):
         self.click_button_xpath(*self.SIGN_IN_XPAHT)
+
+    def click_button_sign_up_xpath(self):
+        self.click_button_xpath(*self.SIGN_UP_XPAHT)
 
     def profile(self):
         time.sleep(5)
@@ -99,3 +129,25 @@ class LoginPage(Page):
             print("Email or password not correct")
         else:
             quit()
+
+    def select_category_company(self):
+        TouchAction(self.driver).tap(x=200, y=850).perform()
+        time.sleep(1)
+        TouchAction(self.driver).tap(x=140, y=1400).perform()
+        time.sleep(1)
+        TouchAction(self.driver).tap(x=100, y=1200).perform()
+        time.sleep(1)
+
+    def click_button_done(self):
+        TouchAction(self.driver).tap(x=650, y=1400).perform()
+        time.sleep(2)
+
+    def click_button_add_address(self):
+        TouchAction(self.driver).tap(x=330, y=1000).perform()
+        time.sleep(1)
+
+    def address_select_from_list_registration(self):
+        TouchAction(self.driver).tap(x=286, y=480).perform()
+        time.sleep(3)
+        TouchAction(self.driver).tap(x=500, y=1100).perform()
+        time.sleep(2)
