@@ -14,15 +14,16 @@ class LoginPage(Page):
     I_AGREE_BUTTON_DE = "Ich stimme den Regeln zu"
     EMAIL_INPUT = "Example@gmail.com"
     EMAIL = "antontyutyunnik93@gmail.com"
-    EMAIL_FOR_REGISTRATION = "avtotest1@gmail.com"
+    EMAIL_FOR_REGISTRATION = "avtotest4@gmail.com"
+    COMPANY_NAME = "avtotest4"
     EMAIL_BAD = "antontyutyunnik9333@gmail.com"
     EMAIL_OR_PASS_NOT_CORRECT = "Email or password not correct"
     COMPANY_NAME_INPUT = "Name business"
-    COMPANY_NAME = "avtotest1"
     SEARCH_ADDRESS_INPUT = "Start typing your address"
     SEARCH_ADDRESS = "Belziger 19"
     EINLOGGEN = "Einloggen"
     PROFILE = "Profile"
+    BUTTON_START_WITH_STRIPE = "Start with stripe"
     PASS_INPUT = "••••••••"
     PASS = "123qqq"
     PASS_BAD = "123qqqBAD"
@@ -57,7 +58,7 @@ class LoginPage(Page):
 
     def click_button_sign_up_on_registration_page_eu(self):
         self.find_elements_and_click(self.SIGN_UP, *self.WIDGET_TEXTVIEW)
-        time.sleep(7)
+        time.sleep(14)
 
     def input_email(self):
         self.input(self.EMAIL_INPUT, self.EMAIL, *self.WIDGET_EDITTEXT)
@@ -119,6 +120,14 @@ class LoginPage(Page):
         e = self.find_element(self.PROFILE, *self.WIDGET_TEXTVIEW)
         if e == self.PROFILE:
             print("Profile page is open")
+        else:
+            quit()
+
+    def online_payments_page_is_open_eu(self):
+        time.sleep(2)
+        e = self.find_element(self.BUTTON_START_WITH_STRIPE, *self.WIDGET_TEXTVIEW)
+        if e == self.BUTTON_START_WITH_STRIPE:
+            print("Online payments page is open")
         else:
             quit()
 

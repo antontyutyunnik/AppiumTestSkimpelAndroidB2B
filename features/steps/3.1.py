@@ -45,4 +45,4 @@ def at_search_enter_address_eu(context):
 @then('Click button Sign up on registration page EU 3.1')
 def click_button_sign_up_on_registration_page_eu(context):
     context.app.login_page.click_button_sign_up_on_registration_page_eu()
-    context.app.login_page.profile_page_is_open_eu()
+    context.app.login_page.online_payments_page_is_open_eu()
