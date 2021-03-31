@@ -1,5 +1,6 @@
 from pages.login_page import LoginPage
 from pages.main_screen import MainScreen
+from pages.menu_page import MenuPage
 
 
 class Application:
@@ -7,3 +8,4 @@ class Application:
     def __init__(self, driver):
         self.login_page = LoginPage(driver)
         self.main_screen = MainScreen(driver)
+        self.menu_page = MenuPage(driver)

@@ -1,7 +1,9 @@
 import time
-
+from selenium.webdriver.support import expected_conditions as EC
 from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+
 from pages.base_page import Page
 
 
@@ -14,8 +16,8 @@ class LoginPage(Page):
     I_AGREE_BUTTON_DE = "Ich stimme den Regeln zu"
     EMAIL_INPUT = "Example@gmail.com"
     EMAIL = "antontyutyunnik93@gmail.com"
-    EMAIL_FOR_REGISTRATION = "avtotest4@gmail.com"
-    COMPANY_NAME = "avtotest4"
+    EMAIL_FOR_REGISTRATION = "avtotest5@gmail.com"
+    COMPANY_NAME = "avtotest5"
     EMAIL_BAD = "antontyutyunnik9333@gmail.com"
     EMAIL_OR_PASS_NOT_CORRECT = "Email or password not correct"
     COMPANY_NAME_INPUT = "Name business"
@@ -31,6 +33,8 @@ class LoginPage(Page):
     SIGN_UP = "Sign Up"
     SIGN_IN_XPAHT = (By.XPATH, "//android.view.ViewGroup[@content-desc='btn-signIn']/android.view.View")
     SIGN_UP_XPAHT = (By.XPATH, "//android.view.ViewGroup[@content-desc='btn-signUp']/android.widget.TextView")
+    PROFILE_XPAHT = (By.XPATH, "//android.view.ViewGroup[@content-desc='Profile, tab, "
+                               "1 of 5']/android.widget.TextView[2]")
     EMAIL_OR_PASS_NOT_CORRECT_XPAHT = (By.XPATH, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout"
                                                  "/android.widget.FrameLayout/android.widget.FrameLayout/android.view"
                                                  ".ViewGroup/android.view.ViewGroup/android.view.ViewGroup["
@@ -116,7 +120,10 @@ class LoginPage(Page):
             quit()
 
     def profile_page_is_open_eu(self):
-        time.sleep(2)
+        try:
+            WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(self.PROFILE_XPAHT))
+        except Exception as ex:
+            print(ex)
         e = self.find_element(self.PROFILE, *self.WIDGET_TEXTVIEW)
         if e == self.PROFILE:
             print("Profile page is open")

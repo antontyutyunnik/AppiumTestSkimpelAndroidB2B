@@ -1,5 +1,9 @@
 import time
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+
 
 class Page:
 
@@ -43,3 +47,11 @@ class Page:
             if element.text == text:
                 element.send_keys(send_text)
                 time.sleep(1)
+
+    def webdriver_wait(self, text, *locator):
+        print(text, *locator)
+        try:
+            e = WebDriverWait(self.driver, 30).until(
+                EC.presence_of_element_located((text, *locator)))
+        except Exception as ex:
+            print(ex)

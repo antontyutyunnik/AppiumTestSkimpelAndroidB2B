@@ -34,38 +34,38 @@ def press_the_menu_button_eu(context):
 
 @when('Clicking on the button will add EU 5.1')
 def press_the_menu_button_eu(context):
-    context.app.main_screen.clicking_on_the_button_will_add_eu()
+    context.app.menu_page.clicking_on_the_button_will_add_eu()
 
 
 @when('Click add photo EU 5.1')
 def click_add_photo_category_eu(context):
-    context.app.main_screen.click_add_photo_category_eu()
+    context.app.menu_page.click_add_photo_category_eu()
 
 
 @when('Press the button with Choose from Library EU 5.1')
 def press_the_button_with_choose_from_library_eu(context):
-    context.app.main_screen.press_the_button_with_choose_from_library_eu()
+    context.app.menu_page.press_the_button_with_choose_from_library_eu()
 
 @when('Click Google Photos EU 5.1')
 def click_google_photos_eu(context):
-    context.app.main_screen.click_google_photos_eu()
+    context.app.menu_page.click_google_photos_eu()
 
 @when('Click on the Downloads folder EU 5.1')
 def click_on_the_downloads_folder(context):
-    context.app.main_screen.click_on_the_downloads_folder_eu()
+    context.app.menu_page.click_on_the_downloads_folder_eu()
 
 @when('Select photo EU 5.1')
 def select_photo(context):
-    context.app.main_screen.select_photo_eu()
+    context.app.menu_page.select_photo_eu()
 
 @when('Input category name EU 5.1')
 def select_photo(context):
-    context.app.main_screen.input_category_name_eu()
+    context.app.menu_page.input_category_name_eu()
 
 @when('Click save EU 5.1')
 def select_photo(context):
-    context.app.main_screen.click_save_category_eu()
+    context.app.menu_page.click_save_category_eu()
 
 @when('Click button ok EU 5.1')
 def select_photo(context):
-    context.app.main_screen.click_button_ok_eu()
+    context.app.menu_page.click_button_ok_eu()
