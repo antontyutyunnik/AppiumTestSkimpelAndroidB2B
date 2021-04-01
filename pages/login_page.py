@@ -120,10 +120,6 @@ class LoginPage(Page):
             quit()
 
     def profile_page_is_open_eu(self):
-        try:
-            WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(self.PROFILE_XPAHT))
-        except Exception as ex:
-            print(ex)
         e = self.find_element(self.PROFILE, *self.WIDGET_TEXTVIEW)
         if e == self.PROFILE:
             print("Profile page is open")
