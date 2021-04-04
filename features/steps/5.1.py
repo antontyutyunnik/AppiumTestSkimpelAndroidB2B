@@ -66,6 +66,6 @@ def select_photo(context):
 def select_photo(context):
     context.app.menu_page.click_save_category_eu()
 
-@when('Click button ok EU 5.1')
+@then('Click button ok EU 5.1')
 def select_photo(context):
     context.app.menu_page.click_button_ok_eu()

@@ -17,4 +17,4 @@ Feature: Creating a category in the menu / choosing a photo for the menu from th
     When Select photo EU 5.1
     When Input category name EU 5.1
     When Click save EU 5.1
-    When Click button ok EU 5.1
+    Then Click button ok EU 5.1

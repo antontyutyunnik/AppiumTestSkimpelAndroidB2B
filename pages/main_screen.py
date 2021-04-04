@@ -19,6 +19,7 @@ class MainScreen(Page):
 
     def click_on_button_menu_eu(self):
         self.find_elements_and_click(self.BUTTON_MENU_EU, *self.WIDGET_TEXTVIEW)
+        time.sleep(1)
 
     def click_on_button_edit_profile_eu(self):
         self.find_elements_and_click(self.BUTTON_EDIT_PROFILE_EU, *self.WIDGET_TEXTVIEW)

@@ -49,3 +49,23 @@ def press_the_button_with_choose_from_library_eu(context):
 @when('Press the button allow EU 5.2')
 def press_the_button_with_choose_from_library_eu(context):
     context.app.menu_page.press_the_button_allow_eu()
+
+@when('Press the button take photo EU 5.2')
+def press_the_button_take_photo_eu(context):
+    context.app.menu_page.press_the_button_take_photo_eu()
+
+@when('Press the button take photo ok EU 5.2')
+def press_the_button_take_photo_ok_eu(context):
+    context.app.menu_page.press_the_button_take_photo_ok_eu()
+
+@when('Input category name EU 5.2')
+def select_photo(context):
+    context.app.menu_page.input_category_name_eu()
+
+@when('Click save EU 5.2')
+def select_photo(context):
+    context.app.menu_page.click_save_category_eu()
+
+@then('Click button ok EU 5.2')
+def select_photo(context):
+    context.app.menu_page.click_button_ok_eu()

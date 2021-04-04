@@ -13,3 +13,8 @@ Feature: Create a category in the menu / take a photo with a smartphone camera
     When Click add photo EU 5.2
     When Press the button with take photo EU 5.2
     When Press the button allow EU 5.2
+    When Press the button take photo EU 5.2
+    When Press the button take photo ok EU 5.2
+    When Input category name EU 5.2
+    When Click save EU 5.2
+    Then Click button ok EU 5.2

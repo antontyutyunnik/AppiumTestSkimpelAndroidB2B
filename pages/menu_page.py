@@ -58,3 +58,12 @@ class MenuPage(Page):
     def press_the_button_allow_eu(self):
         TouchAction(self.driver).tap(x=360, y=850).perform()
         time.sleep(1)
+
+    def press_the_button_take_photo_eu(self):
+        time.sleep(1)
+        TouchAction(self.driver).tap(x=360, y=1350).perform()
+        time.sleep(1)
+
+    def press_the_button_take_photo_ok_eu(self):
+        TouchAction(self.driver).tap(x=560, y=1350).perform()
+        time.sleep(1)
