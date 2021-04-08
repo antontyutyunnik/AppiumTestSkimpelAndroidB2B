@@ -11,3 +11,14 @@ Feature: Add a product to a category / take a photo using a smartphone camera
     When Press the menu button EU 5.3
     When Press the category name EU 5.3
     When Clicking on the button will add EU 5.3
+    When Click add photo EU 5.3
+    When Press the button with take photo EU 5.3
+    When Press the button allow EU 5.3
+    When Press the button take photo EU 5.3
+    When Press the button take photo ok EU 5.3
+    When Input product name EU 5.3
+    When Input description product name EU 5.3
+    When Input product price  EU 5.3
+    When Input product weight EU 5.3
+    When Click save EU 5.3
+    Then Click button ok EU 5.3

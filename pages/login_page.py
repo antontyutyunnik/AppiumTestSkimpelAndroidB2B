@@ -48,6 +48,7 @@ class LoginPage(Page):
         self.find_elements_and_click(self.LANGUAGE_DE_TEXT, *self.WIDGET_TEXTVIEW)
 
     def i_agree(self):
+        time.sleep(2)
         self.driver.swipe(324, 1268, 343, 561, 400)
         self.find_elements_and_click(self.I_AGREE_BUTTON_EU, *self.WIDGET_TEXTVIEW)
 
