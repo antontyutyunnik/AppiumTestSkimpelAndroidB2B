@@ -9,3 +9,15 @@ Feature: Adding an event / selecting a photo for the menu from the smartphone li
     When Click on the "Sign in" button EU 6.1
     When Profile page is open EU 6.1
     When Press the add event button EU 6.1
+    When Click add photo EU 6.1
+    When Press the button with Choose from Library EU 6.1
+    When Click Google Photos EU 6.1
+    When Click on the Downloads folder EU 6.1
+    When Select photo EU 6.1
+    When Enter the name of the event EU 6.1
+    When Enter event description EU 6.1
+    When Enter event date EU 6.1
+    When Enter event time EU 6.1
+    When Enter event price EU 6.1
+    When Click Save EU 6.1
+    Then Click OK EU 6.1
